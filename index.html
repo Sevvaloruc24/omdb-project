@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieNexus | Sinema Rehberi</title>
+    <title>MovieNexus Pro | Sinema Rehberi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -12,21 +12,28 @@
         <header>
             <div class="logo"><i class="fa-solid fa-clapperboard"></i> MovieNexus</div>
             <div class="search-wrapper">
-                <input type="text" id="searchInput" placeholder="Film veya dizi keşfet...">
+                <input type="text" id="searchInput" placeholder="Film, dizi veya kişi adı...">
                 <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </header>
 
         <main id="mainDisplay">
             <div id="welcomeScreen" class="status-msg">
-                <i class="fa-solid fa-film"></i>
-                <h2>Hangi filmi merak ediyorsun?</h2>
-                <p>Milyonlarca yapım arasından bir arama yap.</p>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2>Keşfetmeye Başla</h2>
+                <p>Eksik veya tam isim yazman yeterli, senin için bulacağız.</p>
             </div>
-
             <div id="movieGrid" class="movie-grid"></div>
         </main>
     </div>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
