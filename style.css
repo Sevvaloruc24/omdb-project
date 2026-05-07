@@ -27,7 +27,7 @@ header {
     gap: 20px;
 }
 
-.logo { font-size: 32px; font-weight: 700; color: var(--primary); letter-spacing: -1px; }
+.logo { font-size: 32px; font-weight: 700; color: var(--primary); }
 
 .search-wrapper {
     display: flex;
@@ -40,8 +40,7 @@ header {
 }
 
 input { background: transparent; border: none; color: white; padding: 12px; flex: 1; font-size: 16px; outline: none; }
-button { background: var(--primary); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; transition: 0.3s; }
-button:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
+button { background: var(--primary); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; }
 
 .movie-grid {
     display: grid;
@@ -55,20 +54,19 @@ button:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
     border: 1px solid var(--border);
     border-radius: 20px;
     overflow: hidden;
-    transition: 0.4s;
     cursor: pointer;
-    animation: fadeIn 0.5s ease-out;
+    transition: 0.3s;
 }
 
 .movie-card-mini:hover { transform: translateY(-10px); border-color: var(--primary); }
 .movie-card-mini img { width: 100%; height: 320px; object-fit: cover; }
 .info-box-mini { padding: 15px; }
 
-/* Modal Tasarımı */
+/* Modal Stilleri */
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 9999;
     left: 0; top: 0;
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.9);
@@ -80,25 +78,25 @@ button:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
     margin: 5% auto;
     padding: 40px;
     width: 90%;
-    max-width: 850px;
+    max-width: 800px;
     border-radius: 25px;
     position: relative;
+    border: 1px solid var(--border);
 }
 
-.close-modal { position: absolute; right: 25px; top: 15px; font-size: 35px; cursor: pointer; color: #64748b; }
+.close-modal {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #64748b;
+}
 
 .modal-grid { display: flex; gap: 30px; }
-.modal-poster { width: 280px; border-radius: 15px; object-fit: cover; }
-
-.detail-item { margin-bottom: 10px; font-size: 15px; }
+.modal-poster { width: 280px; border-radius: 15px; }
+.detail-item { margin-bottom: 10px; }
 .detail-item strong { color: var(--primary); }
-
-.badge { background: #334155; padding: 4px 10px; border-radius: 6px; font-size: 12px; margin-right: 6px; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 768px) {
     .modal-grid { flex-direction: column; align-items: center; text-align: center; }
-    .modal-content { margin: 10% auto; padding: 20px; }
-    .modal-poster { width: 200px; }
 }
